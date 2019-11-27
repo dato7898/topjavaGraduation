@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS votes;
 DROP TABLE IF EXISTS user_roles;
 DROP TABLE IF EXISTS lunch;
 DROP TABLE IF EXISTS users;
@@ -26,7 +27,18 @@ CREATE TABLE user_roles
 
 CREATE TABLE lunch (
   id          INTEGER PRIMARY KEY DEFAULT nextval('global_seq'),
-  price       DECIMAL   NOT NULL,
-  date        DATE      NOT NULL,
-  description TEXT      NOT NULL
+  price       DECIMAL                   NOT NULL,
+  date        DATE DEFAULT CURRENT_DATE NOT NULL,
+  description TEXT                      NOT NULL
 );
+
+CREATE TABLE votes (
+    id          INTEGER PRIMARY KEY DEFAULT nextval('global_seq'),
+    date_time   TIMESTAMP DEFAULT now() NOT NULL,
+    user_id     INTEGER                 NOT NULL,
+    lunch_id    INTEGER                 NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+    FOREIGN KEY (lunch_id) REFERENCES lunch (id) ON DELETE CASCADE
+);
+CREATE UNIQUE INDEX votes_unique_user_lunch_idx
+    ON votes (user_id, lunch_id);

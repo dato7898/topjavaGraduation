@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="topjavaGraduation:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa1a849-2d68-424d-b184-67afcfd733fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/RootController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/initDB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/populateDB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB_INF/jsp/index.jsp" afterDir="false" />
+    <list default="true" id="2fa1a849-2d68-424d-b184-67afcfd733fb" name="Default Changelist" comment="fix Hibernate">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/json/JacksonObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/JspUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/RestUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cache/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-tools.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/AbstractBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/AbstractBaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/AbstractNamedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/AbstractNamedEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/Lunch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/Lunch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/populateDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/postgres.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/postgres.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-app.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-db.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB_INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB_INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topjavaGraduation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/topjavaGraduation.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,12 +102,20 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -110,11 +133,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dato\IdeaProjects\topjavaGraduation\src\main\resources\spring" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dato\IdeaProjects\topjavaGraduation\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -225,7 +256,8 @@
       <updated>1574240929045</updated>
       <workItem from="1574240932569" duration="7000000" />
       <workItem from="1574319377249" duration="157000" />
-      <workItem from="1574673603977" duration="6503000" />
+      <workItem from="1574673603977" duration="6614000" />
+      <workItem from="1574841253869" duration="12665000" />
     </task>
     <task id="LOCAL-00001" summary="add Model and spring context">
       <created>1574248381014</created>
@@ -234,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574248381014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initDB and prepared entity">
+      <created>1574681159773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574681159773</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +294,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add Model and spring context" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Model and spring context" />
+    <MESSAGE value="initDB and prepared entity" />
+    <MESSAGE value="fix Hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Hibernate" />
   </component>
 </project>

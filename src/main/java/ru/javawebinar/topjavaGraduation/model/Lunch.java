@@ -1,17 +1,29 @@
 package ru.javawebinar.topjavaGraduation.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
-import java.util.List;
 
+@Entity
+@Table(name = "lunch")
 public class Lunch extends AbstractBaseEntity {
 
+    @Column(name = "price", nullable = false)
+    @NotNull
     private Double price;
 
+    @Column(name = "description", nullable = false)
+    @NotBlank
+    @Size(min = 2, max = 120)
     private String description;
 
+    @Column(name = "date", nullable = false)
+    @NotNull
     private LocalDate date;
-
-    private List<User> votes;
 
     public Lunch() {
 
