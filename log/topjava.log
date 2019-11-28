@@ -1,0 +1,839 @@
+2019-11-28 13:53:33,605 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:271 - Root WebApplicationContext: initialization started
+2019-11-28 13:53:34,354 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-28 13:53:34,572 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 - Finished Spring Data repository scanning in 183ms. Found 2 repository interfaces.
+2019-11-28 13:53:35,196 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-28 13:53:35,337 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.4.7.Final}
+2019-11-28 13:53:35,571 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-28 13:53:36,335 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2019-11-28 13:53:37,708 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.17.Final
+2019-11-28 13:53:38,784 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-28 13:53:38,800 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 13:53:38,831 WARN  o.s.web.context.support.XmlWebApplicationContext.refresh:558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.interceptor.CacheInterceptor#0': Cannot resolve reference to bean 'ehCacheManager' while setting bean property 'cacheManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ehCacheManager': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cache.jcache.JCacheCacheManager] from ClassLoader [ParallelWebappClassLoader
+  context: topjavaGraduation
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@612fc6eb
+]
+2019-11-28 13:53:38,831 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 13:53:38,831 ERROR org.springframework.web.context.ContextLoader.initWebApplicationContext:313 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.interceptor.CacheInterceptor#0': Cannot resolve reference to bean 'ehCacheManager' while setting bean property 'cacheManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ehCacheManager': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cache.jcache.JCacheCacheManager] from ClassLoader [ParallelWebappClassLoader
+  context: topjavaGraduation
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@612fc6eb
+]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1706)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:401)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:292)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4685)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5146)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1728)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:457)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:406)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at java.management/com.sun.jmx.remote.security.MBeanServerAccessController.invoke(MBeanServerAccessController.java:468)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1466)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:689)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1406)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:827)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:689)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:389)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ehCacheManager': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cache.jcache.JCacheCacheManager] from ClassLoader [ParallelWebappClassLoader
+  context: topjavaGraduation
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@612fc6eb
+]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1201)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	... 61 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cache.jcache.JCacheCacheManager] from ClassLoader [ParallelWebappClassLoader
+  context: topjavaGraduation
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@612fc6eb
+]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:477)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:318)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:265)
+	... 70 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/cache/CacheManager
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3171)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2314)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:459)
+	... 72 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.cache.CacheManager
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1188)
+	... 76 common frames omitted
+2019-11-28 13:54:32,947 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:271 - Root WebApplicationContext: initialization started
+2019-11-28 13:54:33,415 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-28 13:54:33,571 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 - Finished Spring Data repository scanning in 143ms. Found 2 repository interfaces.
+2019-11-28 13:54:34,086 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-28 13:54:34,242 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.4.7.Final}
+2019-11-28 13:54:34,476 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-28 13:54:35,069 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2019-11-28 13:54:35,584 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.17.Final
+2019-11-28 13:54:36,551 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-28 13:54:36,567 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 13:54:38,985 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:307 - Root WebApplicationContext initialized in 6038 ms
+2019-11-28 13:54:39,078 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:525 - Initializing Servlet 'mvc-dispatcher'
+2019-11-28 13:54:39,858 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized:351 - 3 mappings in 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping'
+2019-11-28 13:54:40,092 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache:615 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-11-28 13:54:40,170 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache:615 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-11-28 13:54:40,311 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache:297 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-11-28 13:54:40,357 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache:297 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-11-28 13:54:40,389 DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping.registerHandlers:173 - Patterns [/resources/**] in 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2019-11-28 13:54:40,451 DEBUG org.springframework.web.servlet.DispatcherServlet.initServletBean:542 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-11-28 13:54:40,451 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:547 - Completed initialization in 1373 ms
+2019-11-28 13:54:41,122 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/", parameters={}
+2019-11-28 13:54:41,184 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.RootController#root()
+2019-11-28 13:54:41,215 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 13:54:41,215 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 13:54:42,682 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 200 OK
+2019-11-28 13:54:42,996 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/", parameters={}
+2019-11-28 13:54:42,997 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.RootController#root()
+2019-11-28 13:54:43,008 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 13:54:43,008 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 13:54:43,009 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 200 OK
+2019-11-28 13:54:56,149 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/users", parameters={}
+2019-11-28 13:54:56,166 WARN  org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 - No mapping for GET /topjavaGraduation/users
+2019-11-28 13:54:56,166 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 404 NOT_FOUND
+2019-11-28 13:56:21,046 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/rest/users", parameters={}
+2019-11-28 13:56:21,046 WARN  org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 - No mapping for GET /topjavaGraduation/rest/users
+2019-11-28 13:56:21,046 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 404 NOT_FOUND
+2019-11-28 13:56:54,406 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/user", parameters={}
+2019-11-28 13:56:54,406 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.users.JspUserController#getAll(HttpServletRequest, Model)
+2019-11-28 13:56:54,758 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'users', model {users=[User{id=100000, email=user@yandex.ru, name=User, enabled=true, roles=[ROLE_USER]}, User{id=100001, email=admin@gmail.com, name=Admin, enabled=true, roles=[ROLE_ADMIN, ROLE_USER]}]}
+2019-11-28 13:56:54,759 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/users.jsp]
+2019-11-28 13:56:55,209 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 200 OK
+2019-11-28 13:57:01,626 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/rest/user", parameters={}
+2019-11-28 13:57:01,626 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.users.RestUserController#getAll()
+2019-11-28 13:57:01,739 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters:273 - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/signed-exchange;v=b3, application/xml;q=0.9, */*;q=0.8] and supported [application/json]
+2019-11-28 13:57:01,747 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug:91 - Writing [[User{id=100000, email=user@yandex.ru, name=User, enabled=true, roles=[ROLE_USER]}, User{id=100001,  (truncated)...]
+2019-11-28 13:57:02,258 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 200 OK
+2019-11-28 14:44:00,526 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:271 - Root WebApplicationContext: initialization started
+2019-11-28 14:44:01,150 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-28 14:44:01,322 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 - Finished Spring Data repository scanning in 135ms. Found 2 repository interfaces.
+2019-11-28 14:44:03,241 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2019-11-28 14:44:03,272 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/dato/IdeaProjects/topjava/target/topjava/WEB-INF/classes/cache/ehcache.xml,Cache=users
+2019-11-28 14:44:03,319 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/dato/IdeaProjects/topjava/target/topjava/WEB-INF/classes/cache/ehcache.xml,Cache=users
+2019-11-28 14:44:03,506 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-28 14:44:03,740 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.4.7.Final}
+2019-11-28 14:44:03,989 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-28 14:44:04,645 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2019-11-28 14:44:06,173 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.17.Final
+2019-11-28 14:44:06,548 WARN  org.hibernate.orm.cache.createCache:108 - HHH90001006: Missing cache[ru.javawebinar.topjava.model.User] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2019-11-28 14:44:06,563 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'ru.javawebinar.topjava.model.User' created in EhcacheManager.
+2019-11-28 14:44:06,563 WARN  org.hibernate.orm.cache.createCache:108 - HHH90001006: Missing cache[ru.javawebinar.topjava.model.User.roles] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2019-11-28 14:44:06,563 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'ru.javawebinar.topjava.model.User.roles' created in EhcacheManager.
+2019-11-28 14:44:07,078 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-28 14:44:07,219 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 14:44:08,872 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:307 - Root WebApplicationContext initialized in 8346 ms
+2019-11-28 14:44:08,935 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:525 - Initializing Servlet 'mvc-dispatcher'
+2019-11-28 14:44:09,605 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized:351 - 25 mappings in 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping'
+2019-11-28 14:44:09,730 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache:615 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-11-28 14:44:09,777 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache:615 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-11-28 14:44:09,824 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache:297 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-11-28 14:44:09,871 DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping.registerHandlers:173 - Patterns [/resources/**] in 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2019-11-28 14:44:09,902 DEBUG org.springframework.web.servlet.DispatcherServlet.initServletBean:542 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-11-28 14:44:09,902 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:547 - Completed initialization in 967 ms
+2019-11-28 14:44:10,323 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjava/", parameters={}
+2019-11-28 14:44:10,339 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjava.web.RootController#root()
+2019-11-28 14:44:10,354 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 14:44:10,354 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 14:44:11,228 DEBUG org.springframework.web.servlet.DispatcherServlet.render:1377 - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/WEB-INF/jsp/index.jsp]]
+org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:625)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:499)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.WEB_002dINF.jsp.index_jsp._jspService(index_jsp.java:133)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:317)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:666)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:154)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	... 62 common frames omitted
+Caused by: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.springframework.web.servlet.tags.MessageTag.doEndTag(MessageTag.java:294)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspx_meth_spring_005fmessage_005f0(headTag_jsp.java:177)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:135)
+	... 65 common frames omitted
+2019-11-28 14:44:11,243 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1101 - Failed to complete request: org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+2019-11-28 14:44:11,409 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjava/", parameters={}
+2019-11-28 14:44:11,409 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjava.web.RootController#root()
+2019-11-28 14:44:11,411 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 14:44:11,412 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 14:44:11,414 DEBUG org.springframework.web.servlet.DispatcherServlet.render:1377 - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/WEB-INF/jsp/index.jsp]]
+org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:625)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:499)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.WEB_002dINF.jsp.index_jsp._jspService(index_jsp.java:133)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:317)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:666)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:154)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	... 62 common frames omitted
+Caused by: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.springframework.web.servlet.tags.MessageTag.doEndTag(MessageTag.java:294)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspx_meth_spring_005fmessage_005f0(headTag_jsp.java:177)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:135)
+	... 65 common frames omitted
+2019-11-28 14:44:11,415 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1101 - Failed to complete request: org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+2019-11-28 14:45:21,348 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjava/", parameters={}
+2019-11-28 14:45:21,348 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjava.web.RootController#root()
+2019-11-28 14:45:21,349 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 14:45:21,349 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 14:45:21,357 DEBUG org.springframework.web.servlet.DispatcherServlet.render:1377 - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/WEB-INF/jsp/index.jsp]]
+org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:625)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:499)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.WEB_002dINF.jsp.index_jsp._jspService(index_jsp.java:133)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:317)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:666)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:154)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	... 62 common frames omitted
+Caused by: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.springframework.web.servlet.tags.MessageTag.doEndTag(MessageTag.java:294)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspx_meth_spring_005fmessage_005f0(headTag_jsp.java:177)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:135)
+	... 65 common frames omitted
+2019-11-28 14:45:21,363 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1101 - Failed to complete request: org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+2019-11-28 14:45:26,101 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjava/", parameters={}
+2019-11-28 14:45:26,101 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjava.web.RootController#root()
+2019-11-28 14:45:26,101 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 14:45:26,101 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 14:45:26,101 DEBUG org.springframework.web.servlet.DispatcherServlet.render:1377 - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/WEB-INF/jsp/index.jsp]]
+org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:625)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:499)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.WEB_002dINF.jsp.index_jsp._jspService(index_jsp.java:133)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:317)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:666)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:154)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	... 62 common frames omitted
+Caused by: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.springframework.web.servlet.tags.MessageTag.doEndTag(MessageTag.java:294)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspx_meth_spring_005fmessage_005f0(headTag_jsp.java:177)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:135)
+	... 65 common frames omitted
+2019-11-28 14:45:26,116 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1101 - Failed to complete request: org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+2019-11-28 14:45:46,293 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:271 - Root WebApplicationContext: initialization started
+2019-11-28 14:45:46,823 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-28 14:45:46,979 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 - Finished Spring Data repository scanning in 121ms. Found 2 repository interfaces.
+2019-11-28 14:45:48,103 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2019-11-28 14:45:48,134 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/dato/IdeaProjects/topjava/target/topjava/WEB-INF/classes/cache/ehcache.xml,Cache=users
+2019-11-28 14:45:48,181 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/dato/IdeaProjects/topjava/target/topjava/WEB-INF/classes/cache/ehcache.xml,Cache=users
+2019-11-28 14:45:48,352 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-28 14:45:48,461 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.4.7.Final}
+2019-11-28 14:45:48,680 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-28 14:45:49,257 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2019-11-28 14:45:49,787 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.17.Final
+2019-11-28 14:45:50,099 WARN  org.hibernate.orm.cache.createCache:108 - HHH90001006: Missing cache[ru.javawebinar.topjava.model.User.roles] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2019-11-28 14:45:50,099 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'ru.javawebinar.topjava.model.User.roles' created in EhcacheManager.
+2019-11-28 14:45:50,115 WARN  org.hibernate.orm.cache.createCache:108 - HHH90001006: Missing cache[ru.javawebinar.topjava.model.User] was created on-the-fly. The created cache will use a provider-specific default configuration: make sure you defined one. You can disable this warning by setting 'hibernate.javax.cache.missing_cache_strategy' to 'create'.
+2019-11-28 14:45:50,115 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'ru.javawebinar.topjava.model.User' created in EhcacheManager.
+2019-11-28 14:45:50,755 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-28 14:45:50,879 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 14:45:52,205 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:307 - Root WebApplicationContext initialized in 5912 ms
+2019-11-28 14:45:52,315 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:525 - Initializing Servlet 'mvc-dispatcher'
+2019-11-28 14:45:52,939 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized:351 - 25 mappings in 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping'
+2019-11-28 14:45:53,079 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache:615 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-11-28 14:45:53,141 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache:615 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-11-28 14:45:53,188 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache:297 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-11-28 14:45:53,235 DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping.registerHandlers:173 - Patterns [/resources/**] in 'org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0'
+2019-11-28 14:45:53,266 DEBUG org.springframework.web.servlet.DispatcherServlet.initServletBean:542 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-11-28 14:45:53,266 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:547 - Completed initialization in 951 ms
+2019-11-28 14:45:53,531 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjava/", parameters={}
+2019-11-28 14:45:53,531 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjava.web.RootController#root()
+2019-11-28 14:45:53,547 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 14:45:53,563 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 14:45:54,499 DEBUG org.springframework.web.servlet.DispatcherServlet.render:1377 - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/WEB-INF/jsp/index.jsp]]
+org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:625)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:499)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.WEB_002dINF.jsp.index_jsp._jspService(index_jsp.java:133)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:317)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:666)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:154)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	... 62 common frames omitted
+Caused by: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.springframework.web.servlet.tags.MessageTag.doEndTag(MessageTag.java:294)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspx_meth_spring_005fmessage_005f0(headTag_jsp.java:177)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:135)
+	... 65 common frames omitted
+2019-11-28 14:45:54,514 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1101 - Failed to complete request: org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+2019-11-28 14:45:54,661 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjava/", parameters={}
+2019-11-28 14:45:54,661 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjava.web.RootController#root()
+2019-11-28 14:45:54,663 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'index', model {}
+2019-11-28 14:45:54,663 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/index.jsp]
+2019-11-28 14:45:54,669 DEBUG org.springframework.web.servlet.DispatcherServlet.render:1377 - Error rendering view [org.springframework.web.servlet.view.JstlView: name 'index'; URL [/WEB-INF/jsp/index.jsp]]
+org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:625)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:499)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.WEB_002dINF.jsp.index_jsp._jspService(index_jsp.java:133)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:317)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:666)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:154)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:476)
+	... 62 common frames omitted
+Caused by: javax.servlet.jsp.JspTagException: No message found under code 'app.title' for locale 'ru_RU'.
+	at org.springframework.web.servlet.tags.MessageTag.doEndTag(MessageTag.java:294)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspx_meth_spring_005fmessage_005f0(headTag_jsp.java:177)
+	at org.apache.jsp.WEB_002dINF.jsp.fragments.headTag_jsp._jspService(headTag_jsp.java:135)
+	... 65 common frames omitted
+2019-11-28 14:45:54,670 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1101 - Failed to complete request: org.apache.jasper.JasperException: Произошла ошибка при обработке [/WEB-INF/jsp/fragments/headTag.jsp] в строке [8]
+
+5: <head>
+6:     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+7:     <title><spring:message code="app.title"/></title>
+8:     <base href="${pageContext.request.contextPath}/"/>
+9:     <link rel="stylesheet" href="resources/css/style.css">
+10: </head>
+
+
+Stacktrace:

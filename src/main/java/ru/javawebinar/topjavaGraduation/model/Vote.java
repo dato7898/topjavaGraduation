@@ -41,4 +41,28 @@ public class Vote extends AbstractBaseEntity {
         this.user = user;
         this.lunch = lunch;
     }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Lunch getLunch() {
+        return lunch;
+    }
+
+    public void setLunch(Lunch lunch) {
+        this.lunch = lunch;
+    }
 }
