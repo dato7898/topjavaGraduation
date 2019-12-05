@@ -24,6 +24,7 @@ public abstract class AbstractBaseEntity implements Persistable<Integer> {
         this.id = id;
     }
 
+    @Override
     public Integer getId() {
         return id;
     }
@@ -32,6 +33,7 @@ public abstract class AbstractBaseEntity implements Persistable<Integer> {
         this.id = id;
     }
 
+    @Override
     public boolean isNew() {
         return id == null;
     }

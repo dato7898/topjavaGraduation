@@ -2,30 +2,46 @@ package ru.javawebinar.topjavaGraduation.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjavaGraduation.model.Vote;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Repository
 public class DataJpaVoteRepository {
-
     @Autowired
     private CrudVoteRepository voteRepository;
 
     @Autowired
-    private CrudLunchRepository lunchRepository;
-
-    @Autowired
     private CrudUserRepository userRepository;
 
-    public Vote save(Vote vote, int lunchId, int userId) {
-        if (!vote.isNew() && getByIdAndLunchIdAndUserId(vote.getId(), lunchId, userId) == null) {
+    @Autowired
+    private CrudLunchRepository lunchRepository;
+
+    @Transactional
+    public Vote save(Vote vote, int userId, int lunchId) {
+        if (!vote.isNew() && get(vote.getId()) == null) {
             return null;
         }
-        vote.setUser(userRepository.getOne(userId));
         vote.setLunch(lunchRepository.getOne(lunchId));
+        vote.setUser(userRepository.getOne(userId));
         return voteRepository.save(vote);
     }
 
-    public Vote getByIdAndLunchIdAndUserId(int id, int lunchId, int userId) {
-        return voteRepository.findByIdAndLunchIdAndUserId(id, lunchId, userId);
+    public Vote get(int id) {
+        return voteRepository.findById(id).orElse(null);
+    }
+
+    public List<Vote> getAll() {
+        return voteRepository.findAll();
+    }
+
+    public List<Vote> findAllByUserId(int userId) {
+       return voteRepository.findAllByUserId(userId);
+    }
+
+    public List<Vote> findAllByLunchId(int lunchId) {
+        return voteRepository.findAllByLunchId(lunchId);
     }
 }

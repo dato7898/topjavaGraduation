@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import ru.javawebinar.topjavaGraduation.model.Vote;
-import ru.javawebinar.topjavaGraduation.repository.CrudVoteRepository;
 import ru.javawebinar.topjavaGraduation.repository.DataJpaVoteRepository;
 
 import java.util.List;
@@ -17,8 +16,12 @@ public class VoteService {
     @Autowired
     private DataJpaVoteRepository repository;
 
-    public Vote getById(int id) {
-        return checkNotFoundWithId(repository.findById(id).orElse(null), id);
+    public Vote get(int id) {
+        return checkNotFoundWithId(repository.get(id), id);
+    }
+
+    public List<Vote> getAll() {
+        return repository.getAll();
     }
 
     public List<Vote> getAllByUserId(int userId) {
@@ -29,13 +32,13 @@ public class VoteService {
         return repository.findAllByLunchId(lunchId);
     }
 
-    public Vote create(Vote vote) {
+    public Vote create(Vote vote, int userId, int lunchId) {
         Assert.notNull(vote, "vote must not be null");
-        return repository.save(vote);
+        return repository.save(vote, userId, lunchId);
     }
 
-    public Vote update(Vote vote) {
+    public void update(Vote vote, int userId, int lunchId) {
         Assert.notNull(vote, "vote must not be null");
-        checkNotFoundWithId(repository.save(vote), vote.getId());
+        checkNotFoundWithId(repository.save(vote, userId, lunchId), vote.getId());
     }
 }

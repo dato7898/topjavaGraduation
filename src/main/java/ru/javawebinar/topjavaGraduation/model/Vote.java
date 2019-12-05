@@ -15,13 +15,13 @@ public class Vote extends AbstractBaseEntity {
     @NotNull
     private LocalDateTime dateTime;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @NotNull
     private User user;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "lunch_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @NotNull

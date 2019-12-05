@@ -8,8 +8,10 @@ import ru.javawebinar.topjavaGraduation.model.User;
 import static ru.javawebinar.topjavaGraduation.web.SecurityUtil.authUserId;
 
 @RestController
-@RequestMapping("/rest/profile")
+@RequestMapping(ProfileRestController.REST_URL)
 public class ProfileRestController extends AbstractUserController {
+    public static final String REST_URL = "/rest/profile";
+
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public User get() {
         return super.get(authUserId());
