@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 @MappedSuperclass
 @Access(AccessType.FIELD)
-@JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class AbstractBaseEntity {
 
     public static final int START_SEQ = 100000;

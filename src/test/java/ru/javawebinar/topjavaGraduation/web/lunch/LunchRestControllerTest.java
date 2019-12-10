@@ -21,6 +21,7 @@ import static ru.javawebinar.topjavaGraduation.LunchTestData.*;
 
 class LunchRestControllerTest extends AbstractControllerTest {
     private static final String REST_URL = LunchRestController.REST_URL + '/';
+    private static final String REST_URL_ADMIN = REST_URL + "admin/";
 
     @Autowired
     private LunchService mealService;
@@ -36,7 +37,7 @@ class LunchRestControllerTest extends AbstractControllerTest {
 
     @Test
     void delete() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.delete(REST_URL + LUNCH1_ID))
+        mockMvc.perform(MockMvcRequestBuilders.delete(REST_URL_ADMIN + LUNCH1_ID))
                 .andExpect(status().isNoContent());
         assertThrows(NotFoundException.class, () -> mealService.get(LUNCH1_ID));
     }
@@ -45,7 +46,8 @@ class LunchRestControllerTest extends AbstractControllerTest {
     void update() throws Exception {
         Lunch updated = getUpdated();
 
-        mockMvc.perform(MockMvcRequestBuilders.put(REST_URL + LUNCH1_ID).contentType(MediaType.APPLICATION_JSON)
+        mockMvc.perform(MockMvcRequestBuilders.put(REST_URL_ADMIN + LUNCH1_ID)
+                .contentType(MediaType.APPLICATION_JSON)
                 .content(JsonUtil.writeValue(updated)))
                 .andExpect(status().isNoContent());
 
@@ -55,7 +57,7 @@ class LunchRestControllerTest extends AbstractControllerTest {
     @Test
     void createWithLocation() throws Exception {
         Lunch newMeal = getNew();
-        ResultActions action = mockMvc.perform(MockMvcRequestBuilders.post(REST_URL)
+        ResultActions action = mockMvc.perform(MockMvcRequestBuilders.post(REST_URL_ADMIN)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(JsonUtil.writeValue(newMeal)));
 

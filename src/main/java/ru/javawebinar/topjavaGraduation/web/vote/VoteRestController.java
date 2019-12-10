@@ -10,8 +10,9 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/rest/votes")
+@RequestMapping(value = VoteRestController.REST_URL)
 public class VoteRestController extends AbstractVoteController {
+    static final String REST_URL = "/rest/votes";
 
     @Override
     @GetMapping("/{id}")
@@ -27,14 +28,14 @@ public class VoteRestController extends AbstractVoteController {
 
     @Override
     @GetMapping("/byUser")
-    public List<Vote> getAllByUserId(@RequestParam int userId) {
-        return super.getAllByUserId(userId);
+    public List<Vote> getAllByUser(@RequestParam int userId) {
+        return super.getAllByUser(userId);
     }
 
     @Override
     @GetMapping("/byLunch")
-    public List<Vote> getAllByLunchId(@RequestParam int lunchId) {
-        return super.getAllByLunchId(lunchId);
+    public List<Vote> getAllByLunch(@RequestParam int lunchId) {
+        return super.getAllByLunch(lunchId);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)

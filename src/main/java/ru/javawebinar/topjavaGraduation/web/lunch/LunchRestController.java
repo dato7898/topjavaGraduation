@@ -30,7 +30,7 @@ public class LunchRestController extends AbstractLunchController {
         return super.get(id);
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/admin", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Lunch> createWithLocation(@RequestBody Lunch lunch) {
         Lunch created = super.create(lunch);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
@@ -40,14 +40,14 @@ public class LunchRestController extends AbstractLunchController {
     }
 
     @Override
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/admin/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable int id) {
         super.delete(id);
     }
 
     @Override
-    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/admin/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update(@RequestBody Lunch lunch, @PathVariable int id) {
         super.update(lunch, id);

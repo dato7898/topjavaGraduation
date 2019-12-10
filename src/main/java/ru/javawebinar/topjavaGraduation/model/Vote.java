@@ -28,22 +28,19 @@ public class Vote extends AbstractBaseEntity {
     private Lunch lunch;
 
     public Vote() {
-
     }
 
-    public Vote(LocalDateTime dateTime, User user, Lunch lunch) {
-        this(null, dateTime, user, lunch);
+    public Vote(LocalDateTime dateTime) {
+        this(null, dateTime);
     }
 
-    public Vote(Integer id, LocalDateTime dateTime, User user, Lunch lunch) {
+    public Vote(Integer id, LocalDateTime dateTime) {
         super(id);
         this.dateTime = dateTime;
-        this.user = user;
-        this.lunch = lunch;
     }
 
     public LocalDateTime getDateTime() {
-        return dateTime;
+        return this.dateTime;
     }
 
     public void setDateTime(LocalDateTime dateTime) {
