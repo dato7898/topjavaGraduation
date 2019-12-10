@@ -7,28 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa1a849-2d68-424d-b184-67afcfd733fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/json/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/votes/AbstractVoteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/votes/VoteRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/TestUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/UserTestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/web/AbstractControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/web/user/ProfileRestControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/util/DateTimeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/LunchTestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/web/lunch/LunchRestControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/web/user/AdminRestControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/topjava.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/topjava.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/AbstractBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/AbstractBaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/model/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/repository/DataJpaVoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/repository/DataJpaVoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/service/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/service/VoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/RootController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/json/JacksonObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/json/JacksonObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/repository/CrudLunchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/repository/CrudLunchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/service/LunchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/service/LunchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/lunch/LunchRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/lunch/LunchRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/ProfileRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/ProfileRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/AbstractUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/user/AbstractUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/AdminRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/user/AdminRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/users/ProfileRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/user/ProfileRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/votes/AbstractVoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/vote/AbstractVoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/votes/VoteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/vote/VoteRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/web/user/ProfileRestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjavaGraduation/web/user/ProfileRestControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,21 +137,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../topjava" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dato\IdeaProjects\topjavaGraduation\src\main\resources\spring" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.javawebinar.topjavaGraduation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dato\IdeaProjects\topjavaGraduation\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dato\IdeaProjects\topjavaGraduation\src\main\resources\spring" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,7 +167,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProfileRestControllerTest">
+  <component name="RunManager" selected="JUnit.LunchRestControllerTest">
+    <configuration name="AdminRestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topjavaGraduation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javawebinar.topjavaGraduation.web.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javawebinar.topjavaGraduation.web.user" />
+      <option name="MAIN_CLASS_NAME" value="ru.javawebinar.topjavaGraduation.web.user.AdminRestControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LunchRestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topjavaGraduation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javawebinar.topjavaGraduation.web.lunch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javawebinar.topjavaGraduation.web.lunch" />
+      <option name="MAIN_CLASS_NAME" value="ru.javawebinar.topjavaGraduation.web.lunch.LunchRestControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LunchRestControllerTest.filter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topjavaGraduation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javawebinar.topjavaGraduation.web.lunch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javawebinar.topjavaGraduation.web.lunch" />
+      <option name="MAIN_CLASS_NAME" value="ru.javawebinar.topjavaGraduation.web.lunch.LunchRestControllerTest" />
+      <option name="METHOD_NAME" value="filter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProfileRestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="topjavaGraduation" />
       <extension name="coverage">
@@ -183,6 +225,22 @@
       <option name="PACKAGE_NAME" value="ru.javawebinar.topjavaGraduation.web.user" />
       <option name="MAIN_CLASS_NAME" value="ru.javawebinar.topjavaGraduation.web.user.ProfileRestControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileRestControllerTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topjavaGraduation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javawebinar.topjavaGraduation.web.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javawebinar.topjavaGraduation.web.user" />
+      <option name="MAIN_CLASS_NAME" value="ru.javawebinar.topjavaGraduation.web.user.ProfileRestControllerTest" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -262,7 +320,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LunchRestControllerTest" />
+        <item itemvalue="JUnit.LunchRestControllerTest.filter" />
+        <item itemvalue="JUnit.AdminRestControllerTest" />
         <item itemvalue="JUnit.ProfileRestControllerTest" />
+        <item itemvalue="JUnit.ProfileRestControllerTest.get" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +356,9 @@
       <workItem from="1574930880245" duration="6061000" />
       <workItem from="1575442213539" duration="56000" />
       <workItem from="1575531526229" duration="6482000" />
-      <workItem from="1575540098707" duration="4244000" />
+      <workItem from="1575540098707" duration="4310000" />
+      <workItem from="1575629168569" duration="199000" />
+      <workItem from="1575968791533" duration="7736000" />
     </task>
     <task id="LOCAL-00001" summary="add Model and spring context">
       <created>1574248381014</created>
@@ -324,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574941113591</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Vote Entity and First test with json Mapper">
+      <created>1575544393407</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575544393407</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +420,18 @@
     <MESSAGE value="initDB and prepared entity" />
     <MESSAGE value="fix Hibernate" />
     <MESSAGE value="add layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add layers" />
+    <MESSAGE value="Vote Entity and First test with json Mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vote Entity and First test with json Mapper" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/javawebinar/topjavaGraduation/web/lunch/LunchRestController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

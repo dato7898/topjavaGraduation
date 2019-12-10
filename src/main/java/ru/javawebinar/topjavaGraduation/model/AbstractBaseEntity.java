@@ -1,13 +1,14 @@
 package ru.javawebinar.topjavaGraduation.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.Hibernate;
-import org.springframework.data.domain.Persistable;
 
 import javax.persistence.*;
 
 @MappedSuperclass
 @Access(AccessType.FIELD)
-public abstract class AbstractBaseEntity implements Persistable<Integer> {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public abstract class AbstractBaseEntity {
 
     public static final int START_SEQ = 100000;
 
@@ -20,11 +21,10 @@ public abstract class AbstractBaseEntity implements Persistable<Integer> {
 
     }
 
-    public AbstractBaseEntity(Integer id) {
+    AbstractBaseEntity(Integer id) {
         this.id = id;
     }
 
-    @Override
     public Integer getId() {
         return id;
     }
@@ -33,9 +33,8 @@ public abstract class AbstractBaseEntity implements Persistable<Integer> {
         this.id = id;
     }
 
-    @Override
     public boolean isNew() {
-        return id == null;
+        return this.id == null;
     }
 
     @Override

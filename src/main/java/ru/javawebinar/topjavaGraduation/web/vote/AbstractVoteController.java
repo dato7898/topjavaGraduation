@@ -1,4 +1,4 @@
-package ru.javawebinar.topjavaGraduation.web.votes;
+package ru.javawebinar.topjavaGraduation.web.vote;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

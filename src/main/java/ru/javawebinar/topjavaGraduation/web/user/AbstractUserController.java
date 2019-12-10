@@ -1,4 +1,4 @@
-package ru.javawebinar.topjavaGraduation.web.users;
+package ru.javawebinar.topjavaGraduation.web.user;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

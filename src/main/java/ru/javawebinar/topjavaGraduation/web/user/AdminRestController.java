@@ -1,4 +1,4 @@
-package ru.javawebinar.topjavaGraduation.web.users;
+package ru.javawebinar.topjavaGraduation.web.user;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -11,8 +11,11 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/rest/admin", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = AdminRestController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 public class AdminRestController extends AbstractUserController {
+
+    static final String REST_URL = "/rest/admin/users";
+
     @GetMapping
     public List<User> getAll() {
         return super.getAll();

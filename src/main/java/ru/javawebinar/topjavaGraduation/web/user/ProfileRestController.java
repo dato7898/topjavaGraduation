@@ -1,4 +1,4 @@
-package ru.javawebinar.topjavaGraduation.web.users;
+package ru.javawebinar.topjavaGraduation.web.user;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

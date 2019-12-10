@@ -1,4 +1,4 @@
-package ru.javawebinar.topjavaGraduation.web.votes;
+package ru.javawebinar.topjavaGraduation.web.vote;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

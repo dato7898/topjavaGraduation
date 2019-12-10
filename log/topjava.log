@@ -158,12 +158,12 @@ Caused by: java.lang.ClassNotFoundException: javax.cache.CacheManager
 2019-11-28 13:56:21,046 WARN  org.springframework.web.servlet.PageNotFound.noHandlerFound:1251 - No mapping for GET /topjavaGraduation/rest/users
 2019-11-28 13:56:21,046 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 404 NOT_FOUND
 2019-11-28 13:56:54,406 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/user", parameters={}
-2019-11-28 13:56:54,406 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.users.JspUserController#getAll(HttpServletRequest, Model)
+2019-11-28 13:56:54,406 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.user.JspUserController#getAll(HttpServletRequest, Model)
 2019-11-28 13:56:54,758 DEBUG org.springframework.web.servlet.view.JstlView.render:310 - View name 'users', model {users=[User{id=100000, email=user@yandex.ru, name=User, enabled=true, roles=[ROLE_USER]}, User{id=100001, email=admin@gmail.com, name=Admin, enabled=true, roles=[ROLE_ADMIN, ROLE_USER]}]}
 2019-11-28 13:56:54,759 DEBUG org.springframework.web.servlet.view.JstlView.renderMergedOutputModel:169 - Forwarding to [/WEB-INF/jsp/users.jsp]
 2019-11-28 13:56:55,209 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 200 OK
 2019-11-28 13:57:01,626 DEBUG org.springframework.web.servlet.DispatcherServlet.traceDebug:91 - GET "/topjavaGraduation/rest/user", parameters={}
-2019-11-28 13:57:01,626 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.users.RestUserController#getAll()
+2019-11-28 13:57:01,626 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping.getHandler:412 - Mapped to ru.javawebinar.topjavaGraduation.web.user.RestUserController#getAll()
 2019-11-28 13:57:01,739 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.writeWithMessageConverters:273 - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/signed-exchange;v=b3, application/xml;q=0.9, */*;q=0.8] and supported [application/json]
 2019-11-28 13:57:01,747 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.traceDebug:91 - Writing [[User{id=100000, email=user@yandex.ru, name=User, enabled=true, roles=[ROLE_USER]}, User{id=100001,  (truncated)...]
 2019-11-28 13:57:02,258 DEBUG org.springframework.web.servlet.DispatcherServlet.logResult:1131 - Completed 200 OK

@@ -10,6 +10,8 @@ import ru.javawebinar.topjavaGraduation.repository.CrudLunchRepository;
 import java.time.LocalDate;
 import java.util.List;
 
+import static ru.javawebinar.topjavaGraduation.util.DateTimeUtil.getEndExclusive;
+import static ru.javawebinar.topjavaGraduation.util.DateTimeUtil.getStartInclusive;
 import static ru.javawebinar.topjavaGraduation.util.ValidationUtil.checkNotFoundWithId;
 
 @Service
@@ -27,11 +29,12 @@ public class LunchService {
     }
 
     public List<Lunch> getBetweenDates(@Nullable LocalDate startDate, @Nullable LocalDate endDate) {
-        return repository.getBetween(startDate, endDate);
+        return repository.getBetween(getStartInclusive(startDate), getEndExclusive(endDate));
     }
 
     public List<Lunch> getAll() {
-        return repository.getAll();
+       List<Lunch> lunches = repository.getAll();
+       return lunches;
     }
 
     public void update(Lunch lunch) {

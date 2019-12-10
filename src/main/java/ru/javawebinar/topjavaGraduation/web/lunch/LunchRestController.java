@@ -13,8 +13,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/rest/lunch", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = LunchRestController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 public class LunchRestController extends AbstractLunchController {
+
+    static final String REST_URL = "/rest/lunch";
+
     @Override
     @GetMapping
     public List<Lunch> getAll() {
@@ -31,7 +34,7 @@ public class LunchRestController extends AbstractLunchController {
     public ResponseEntity<Lunch> createWithLocation(@RequestBody Lunch lunch) {
         Lunch created = super.create(lunch);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/rest/lunch/{id}")
+                .path(REST_URL + "/{id}")
                 .buildAndExpand(created.getId()).toUri();
         return ResponseEntity.created(uriOfNewResource).body(created);
     }
@@ -50,7 +53,7 @@ public class LunchRestController extends AbstractLunchController {
         super.update(lunch, id);
     }
 
-    @GetMapping("/between")
+    @GetMapping("/filter")
     public List<Lunch> getBetween(@RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
                                   @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {
         return super.getBetween(startDate, endDate);

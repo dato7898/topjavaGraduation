@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.javawebinar.topjavaGraduation.UserTestData.*;
-import static ru.javawebinar.topjavaGraduation.web.users.ProfileRestController.REST_URL;
+import static ru.javawebinar.topjavaGraduation.web.user.ProfileRestController.REST_URL;
 
 public class ProfileRestControllerTest extends AbstractControllerTest {
     @Autowired

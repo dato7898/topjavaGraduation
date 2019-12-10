@@ -17,9 +17,9 @@ public interface CrudLunchRepository extends JpaRepository<Lunch, Integer> {
     @Query("DELETE FROM Lunch l WHERE l.id=:id")
     int delete(@Param("id") int id);
 
-    @Query("SELECT l FROM Lunch l ORDER BY l.date DESC")
+    @Query("SELECT l FROM Lunch l ORDER BY l.date DESC, l.id DESC")
     List<Lunch> getAll();
 
-    @Query("SELECT l from Lunch l WHERE l.date >= :startDate AND l.date < :endDate ORDER BY l.date DESC")
+    @Query("SELECT l from Lunch l WHERE l.date >= :startDate AND l.date < :endDate ORDER BY l.date DESC, l.id DESC")
     List<Lunch> getBetween(@Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
 }
