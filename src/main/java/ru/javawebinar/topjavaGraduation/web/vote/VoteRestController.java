@@ -1,5 +1,6 @@
 package ru.javawebinar.topjavaGraduation.web.vote;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,23 +28,23 @@ public class VoteRestController extends AbstractVoteController {
     }
 
     @Override
-    @GetMapping("/byUser")
-    public List<Vote> getAllByUser(@RequestParam int userId) {
-        return super.getAllByUser(userId);
-    }
-
-    @Override
-    @GetMapping("/byLunch")
-    public List<Vote> getAllByLunch(@RequestParam int lunchId) {
+    @GetMapping("/byLunch/{lunchId}")
+    public List<Vote> getAllByLunch(@PathVariable int lunchId) {
         return super.getAllByLunch(lunchId);
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Vote> createWithLocation(@RequestBody Vote vote, @RequestParam int lunchId) {
+    @PostMapping(value = "/{lunchId}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Vote> createWithLocation(@RequestBody Vote vote, @PathVariable int lunchId) {
         Vote created = super.create(vote, lunchId);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/rest/votes/{id}")
                 .buildAndExpand(created.getId()).toUri();
         return ResponseEntity.created(uriOfNewResource).body(created);
+    }
+
+    @PutMapping("/{id}/{lunchId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void update(@RequestBody Vote vote, @PathVariable int id, @PathVariable int lunchId) {
+        super.update(vote, id, lunchId);
     }
 }

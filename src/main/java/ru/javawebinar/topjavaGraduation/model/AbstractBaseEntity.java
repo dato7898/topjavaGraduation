@@ -1,6 +1,5 @@
 package ru.javawebinar.topjavaGraduation.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;

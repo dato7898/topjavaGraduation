@@ -21,25 +21,21 @@ public class VoteService {
         return checkNotFoundWithId(repository.get(id, userId), id);
     }
 
-    public List<Vote> getAll() {
-        return repository.getAll();
-    }
-
-    public List<Vote> getAllByUser(int userId) {
-        return repository.getAllByUser(userId);
+    public List<Vote> getAll(int userId) {
+        return repository.getAll(userId);
     }
 
     public List<Vote> getAllByLunch(int lunchId) {
         return repository.getAllByLunch(lunchId);
     }
 
-    public Vote create(Vote vote, int userId, int lunchId, LocalDateTime now) {
+    public Vote create(Vote vote, int userId, int lunchId) {
         Assert.notNull(vote, "vote must not be null");
-        return repository.save(vote, userId, lunchId, now);
+        return repository.save(vote, userId, lunchId);
     }
 
-    public void update(Vote vote, int userId, int lunchId, LocalDateTime now) {
+    public void update(Vote vote, int userId, int lunchId) {
         Assert.notNull(vote, "vote must not be null");
-        checkNotFoundWithId(repository.save(vote, userId, lunchId, now), vote.getId());
+        checkNotFoundWithId(repository.save(vote, userId, lunchId), vote.getId());
     }
 }

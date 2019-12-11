@@ -12,9 +12,8 @@ import java.util.List;
 public interface CrudVoteRepository extends JpaRepository<Vote, Integer> {
 
     @Query("SELECT v FROM Vote v WHERE v.user.id=:userId ORDER BY v.dateTime DESC")
-    List<Vote> getAllByUser(@Param("userId")int userId);
+    List<Vote> getAll(@Param("userId") int userId);
 
     @Query("SELECT v FROM Vote v WHERE v.lunch.id=:lunchId ORDER BY v.dateTime DESC")
     List<Vote> getAllByLunch(@Param("lunchId") int lunchId);
-
 }

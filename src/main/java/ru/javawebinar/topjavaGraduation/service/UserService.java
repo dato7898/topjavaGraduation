@@ -3,6 +3,7 @@ package ru.javawebinar.topjavaGraduation.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import ru.javawebinar.topjavaGraduation.model.User;
 import ru.javawebinar.topjavaGraduation.repository.CrudUserRepository;
@@ -44,5 +45,12 @@ public class UserService {
     public void update(User user) {
         Assert.notNull(user, "user must not be null");
         checkNotFoundWithId(repository.save(user), user.getId());
+    }
+
+    @Transactional
+    public void enable(int id, boolean enabled) {
+        User user = get(id);
+        user.setEnabled(enabled);
+        repository.save(user);
     }
 }

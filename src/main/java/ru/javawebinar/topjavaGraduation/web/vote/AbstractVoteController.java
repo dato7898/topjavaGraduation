@@ -11,7 +11,6 @@ import java.util.List;
 import static ru.javawebinar.topjavaGraduation.util.ValidationUtil.assureIdConsistent;
 import static ru.javawebinar.topjavaGraduation.util.ValidationUtil.checkNew;
 import static ru.javawebinar.topjavaGraduation.web.SecurityUtil.authUserId;
-import static java.time.LocalDateTime.now;
 
 public abstract class AbstractVoteController {
     protected final Logger log = LoggerFactory.getLogger(getClass());
@@ -26,13 +25,9 @@ public abstract class AbstractVoteController {
     }
 
     public List<Vote> getAll() {
-        log.info("getAll");
-        return service.getAll();
-    }
-
-    public List<Vote> getAllByUser(int userId) {
-        log.info("getAll By UserId {}", userId);
-        return service.getAllByUser(userId);
+        int userId = authUserId();
+        log.info("getAll for user {}", userId);
+        return service.getAll(userId);
     }
 
     public List<Vote> getAllByLunch(int lunchId) {
@@ -44,13 +39,13 @@ public abstract class AbstractVoteController {
         int userId = authUserId();
         checkNew(vote);
         log.info("create {} for user {} and lunch {}", vote, userId, lunchId);
-        return service.create(vote, userId, lunchId, now());
+        return service.create(vote, userId, lunchId);
     }
 
     public void update(Vote vote, int id, int lunchId) {
         int userId = authUserId();
         assureIdConsistent(vote, id);
         log.info("update {} for user {} and lunch {}", vote, userId, lunchId);
-        service.update(vote, userId, lunchId, now());
+        service.update(vote, userId, lunchId);
     }
 }

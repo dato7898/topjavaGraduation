@@ -23,12 +23,12 @@ public class DataJpaVoteRepository {
     private CrudLunchRepository lunchRepository;
 
     @Transactional
-    public Vote save(Vote vote, int userId, int lunchId, LocalDateTime now) {
+    public Vote save(Vote vote, int userId, int lunchId) {
         if (!vote.isNew() && get(vote.getId(), userId) == null) {
             return null;
         }
         Lunch lunch = lunchRepository.getOne(lunchId);
-        if (!dateTimeFilter(now, lunch.getDate())) {
+        if (!dateTimeFilter(vote.getDateTime(), lunch.getDate())) {
             return null;
         }
         vote.setLunch(lunch);
@@ -40,12 +40,8 @@ public class DataJpaVoteRepository {
         return voteRepository.findById(id).filter(lunch -> lunch.getUser().getId() == userId).orElse(null);
     }
 
-    public List<Vote> getAll() {
-        return voteRepository.findAll();
-    }
-
-    public List<Vote> getAllByUser(int userId) {
-       return voteRepository.getAllByUser(userId);
+    public List<Vote> getAll(int userId) {
+        return voteRepository.getAll(userId);
     }
 
     public List<Vote> getAllByLunch(int lunchId) {
